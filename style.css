@@ -1,0 +1,334 @@
+/* ======= GAYA HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1a1f36, #2b3a67, #3a68b8);
+  padding: 18px 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ======= JUDUL DI KIRI ======= */
+.judul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.judul .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.judul span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ======= NAV MENU ======= */
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animasi hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffda79;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffda79;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ======= GAYA UMUM ======= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fc;
+}
+/* ===== RESET DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #e8ebf7, #f7f9fc);
+  color: #222;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(90deg, #1a237e, #3949ab);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .judul {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+
+
+/* ===== BAGIAN UMUM ===== */
+.bagian {
+  padding: 70px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bagian h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== KONTEN GABUNGAN GAMBAR DAN TEKS ===== */
+.konten {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.konten .gambar {
+  flex: 1;
+  min-width: 280px;
+}
+
+.konten .gambar img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.konten .teks {
+  flex: 1.3;
+  min-width: 300px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BAGIAN PEMBAHASAN (gambar kanan) ===== */
+.pembahasan .konten {
+  flex-direction: row-reverse;
+}
+
+/* ===== BAGIAN TEORI ===== */
+.teori .konten {
+  flex-direction: row;
+}
+
+/* ===== GAYA UNTUK BAGIAN VIDEO ===== */
+#video {
+  background: linear-gradient(135deg, #f0f8ff, #d6eaff);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+#video h2 {
+  color: #004aad;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#video p {
+  color: #333;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Kontainer video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gaya elemen video */
+.video-container video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 15px;
+  border: 3px solid #007bff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Efek saat hover */
+.video-container video:hover {
+  transform: scale(1.03);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  #video h2 {
+    font-size: 22px;
+  }
+
+  #video p {
+    font-size: 14px;
+  }
+
+  .video-container video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ===== TEAM ===== */
+#team {
+  background: #f0f2ff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#team h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 40px;
+}
+
+.anggota-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.anggota-card {
+  background: white;
+  width: 200px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.anggota-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.anggota-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.anggota-card h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #1a237e;
+}
+
+.anggota-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== KESIMPULAN ===== */
+.kesimpulan {
+  background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+  padding: 80px 20px;
+}
+
+.kesimpulan h2 {
+  color: #1a237e;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.kesimpulan p {
+  max-width: 900px;
+  margin: 10px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .konten {
+    flex-direction: column;
+  }
+
+  header .judul {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+  }
+}
